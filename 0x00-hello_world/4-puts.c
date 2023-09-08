@@ -1,9 +1,13 @@
 #include <stdio.h>
-/* This function uses puts */
-int main (void)
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
 	const char *str = "\"Programming is like building a multilingual puzzle";
-	puts (str);
-	return (0);
+	puts(str);
+	return(0);
 }
 
