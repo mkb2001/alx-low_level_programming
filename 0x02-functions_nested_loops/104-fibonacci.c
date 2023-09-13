@@ -6,26 +6,29 @@
  * Return:  0.
  */
 int main() {
-    
+   
     unsigned int prev = 1;
     unsigned int current = 2;
 
+   
     printf("%u, %u", prev, current);
 
-    int i;
+    int i = 3;
 
-    for (i = 3; i <= 98; i++) {
-        
+    while (i <= 98) {
+
         unsigned int next = prev + current;
-
         printf(", %u", next);
 
-        
+
         prev = current;
         current = next;
+
+        i++;
     }
 
     printf("\n");
 
-    return 0;
+    return (0);
 }
+
