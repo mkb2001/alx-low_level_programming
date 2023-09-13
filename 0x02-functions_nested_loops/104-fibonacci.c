@@ -10,9 +10,10 @@ void add_str_nums(char *n1, char *n2, char *res) {
     int len1 = strlen(n1);
     int len2 = strlen(n2);
     int max_len = len1 > len2 ? len1 : len2;
+    int i;
     res[max_len + 1] = '\0';
 
-    for (int i = 0; i < max_len; i++) {
+    for (i = 0; i < max_len; i++) {
         int num1 = i < len1 ? n1[len1 - 1 - i] - '0' : 0;
         int num2 = i < len2 ? n2[len2 - 1 - i] - '0' : 0;
         int sum = num1 + num2 + carry;
@@ -36,9 +37,9 @@ int main(void) {
     char a[5000] = "1";
     char b[5000] = "2";
     char res[5000];
-
+    int i;
     printf("%s, %s", a, b);
-    for (int i = 3; i <= 98; i++) {
+    for ( i = 3; i <= 98; i++) {
         add_str_nums(a, b, res);
         printf(", %s", res);
         strcpy(a, b);
