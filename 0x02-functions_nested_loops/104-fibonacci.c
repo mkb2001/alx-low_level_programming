@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <string.h>
+
 #define LARGEST 10000000000
 /**
  * main - check the code.
  *
- * Return: int  
+ * Return: Always 0.
  */
 int main(void)
 {
