@@ -12,8 +12,9 @@ int main() {
 
     printf("%u, %u", prev, current);
 
-    
-    for (int i = 3; i <= 98; i++) {
+    int i;
+
+    for (i = 3; i <= 98; i++) {
         
         unsigned int next = prev + current;
 
