@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#define LARGEST 10000000000
 /**
  * add_str_nums - check the code.
  *
