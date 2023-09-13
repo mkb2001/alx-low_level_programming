@@ -9,11 +9,11 @@ int main() {
    
     unsigned int prev = 1;
     unsigned int current = 2;
-
+    int i = 3;
    
     printf("%u, %u", prev, current);
 
-    int i = 3;
+ 
 
     while (i <= 98) {
 
