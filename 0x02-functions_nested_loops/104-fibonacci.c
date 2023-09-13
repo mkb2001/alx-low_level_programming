@@ -4,9 +4,7 @@
 /**
  * main - check the code.
  *
- * Return: int 
- *
- *  
+ * Return: int  
  */
 int main(void)
 {
