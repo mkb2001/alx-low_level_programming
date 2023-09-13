@@ -1,34 +1,33 @@
 #include <stdio.h>
 /**
- * main - prints a fibonaci 
+ * main - check the code.
  *
- * 
- * Return:  0.
+ * Return: Always 0.
  */
 int main() {
-   
-    unsigned int prev = 1;
-    unsigned int current = 2;
-    int i = 3;
-   
-    printf("%u, %u", prev, current);
+    
+	unsigned int prev = 1;
+	unsigned int current = 2;
+	int count = 2;
+	const int maxCount = 98;
+	
+	printf("%u, %u", prev, current);
 
- 
+	while (count < maxCount) {
 
-    while (i <= 98) {
-
-        unsigned int next = prev + current;
-        printf(", %u", next);
+		unsigned int next = prev + current;
 
 
-        prev = current;
-        current = next;
+		printf(", %u", next);
 
-        i++;
-    }
+		prev = current;
+		current = next;
 
-    printf("\n");
+		count++;
+	}
 
-    return (0);
+
+	printf('\n');
+
+	return (0);
 }
-
