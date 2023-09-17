@@ -2,8 +2,9 @@
 
 /**
  * _isupper - check the code.
+ * @c: the number to be checked
  *
- * Return: Always 0.
+ * Return: 1 for upper nad 0 for anything else
  */
 
 int _isupper(int c)
@@ -12,5 +13,6 @@ int _isupper(int c)
 	{
 		return (1);
 	}
+
 	return (0);
 }
