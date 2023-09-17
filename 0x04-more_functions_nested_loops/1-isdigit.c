@@ -1,4 +1,5 @@
-#include <main.h>
+#include "main.h"
+
 /**
  * _isdigit - check the code
  * @c: digit to check
@@ -6,7 +7,7 @@
  */
 int _isdigit(int c)
 {
-	if ( c >= 48  && c <= 57 )
+	if (c >= 48  && c <= 57)
 	{
 		return (1);
 	} 
