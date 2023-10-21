@@ -8,19 +8,19 @@
  *
  * Return: pointer to the resulting string
  */
-char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int y)
 {
 	int x;
 
 	x = 0;
 
-	for(;src[x] != '\0' && i < n;x++;)
+	while (src[x] != '\0' && x < y)
 	{
 		dest[x] = src[x];
-		
+		x++;
 	}
 
-	while (x < n)
+	while (x < y)
 	{
 		dest[x] = '\0';
 		x++;
