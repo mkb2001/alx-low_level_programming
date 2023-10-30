@@ -21,13 +21,10 @@ int _sqrt_recursion(int n)
 */
 int actual_squareroot(int n, int i)
 {
-	if(i * i < 0 )
-	{
+	if(i * i > n )
 		return (-1);
-	}
+	
 	if (i * i == n)
-	{
 		return (i);
-	}
 	return (actual_squareroot(n, i + 1));
 }
