@@ -9,3 +9,5 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int actual_squareroot(int n, int i);
+int actual_prime(int n, int i);
+int palindrome(char *s, int len);
