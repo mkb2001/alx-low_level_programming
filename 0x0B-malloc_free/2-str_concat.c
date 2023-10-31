@@ -4,35 +4,48 @@
 * str_concat - function that concatenates two strings
 * @s1: pointer to the first string
 * @s2: pointer to the second string
-* @n: number of bytes of s2 to concatenate to s1
+*
 *
 * Return: pointer to the concatenated string
 */
 
-char *str_concat(char *s1, char *s2, unsigned int n)
+char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
+	char *concat;
 
-	unsigned int i, j, len1, len2;
+	int i, j, len1, len2;
+
+	i = 0;
+	j = 0;
+	len1 = 0;
+	len2 = 0;
 
 	if (s1 == NULL)
-		return (NULL);
+		s1 = "";
 	if (s2 == NULL)
-		return (NULL);
-	while (s1[len1] != '\0')
-		len1++;
-	if (n >= len1)
-		n = len1;
-	while (s2[len2] != '\0')
-		len2++;
-	ptr = malloc(sizeof(char) * (len1 + n + 1));
-	if (ptr == NULL)
-		return (NULL);
-	for (i = 0; i < len1; i++)
-		ptr[i] = s1[i];
-	for (j = 0; j < n; j++)
-		ptr[i + j] = s2[j];
-	ptr[i + j] = '\0';
-	return (ptr);
+		s2 = "";
 
+	while (s1[len1])
+		len1++;
+	while (s2[len2])
+		len2++;
+
+	concat = malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (concat == NULL)
+		return (NULL);
+
+	while (i < len1)
+	{
+		concat[i] = s1[i];
+		i++;
+	}
+	while (i < (len1 + len2))
+	{
+		concat[i] = s2[j];
+		i++;
+		j++;
+	}
+	concat[i] = '\0';
+	return (concat);
 }
