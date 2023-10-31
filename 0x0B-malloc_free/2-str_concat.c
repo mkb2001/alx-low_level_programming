@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* string_nconcat - function that concatenates two strings
+* str_concat - function that concatenates two strings
 * @s1: pointer to the first string
 * @s2: pointer to the second string
 * @n: number of bytes of s2 to concatenate to s1
@@ -9,7 +9,7 @@
 * Return: pointer to the concatenated string
 */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *str_concat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
 
