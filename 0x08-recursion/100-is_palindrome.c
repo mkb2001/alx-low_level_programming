@@ -24,8 +24,8 @@ int is_palindrome(char *s)
 * and 0 if not.
 * @s : pointer to the string to be evaluated
 * @len : length of the string
-
-* Return : 1 if s is a palindrome, 0 if not
+*
+* Return: 1 if s is a palindrome, 0 if not
 */
 
 int palindrome(char *s, int len)
@@ -44,7 +44,6 @@ int palindrome(char *s, int len)
  * _strlen_recursion - function that returns the length
  *  of a string.
  * @s: pointer to the string to be evaluated
- * 
  * Return: length of the string
  */
 int _strlen_recursion(char *s)
