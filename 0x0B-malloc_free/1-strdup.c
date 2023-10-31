@@ -5,14 +5,16 @@
 *
 * @str: the string to return
 *
-* Return - a pointer to a newly allocated space in memory
+* Return: a pointer to a newly allocated space in memory, or NUL
 */
 
 char *_strdup(char *str)
 {
-	char *ptr;
-
+	char *dup;
 	unsigned int i, len;
+
+	i = 0;
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -20,14 +22,15 @@ char *_strdup(char *str)
 	while (str[len])
 		len++;
 
-	ptr = malloc(sizeof(char) * (len + 1));
-	if (ptr == NULL)
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
 		return (NULL);
 
-	while ((ptr[i] = str[i]) != '\0')
+	while ((dup[i] = str[i]) != '\0')
 		i++;
 
-	return (ptr);
+	return (dup);
 
 }
 
