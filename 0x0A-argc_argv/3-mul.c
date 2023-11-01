@@ -2,13 +2,6 @@
 #include "main.h"
 
 /**
-*
-*/
-
-#include <stdio.h>
-#include "main.h"
-
-/**
 * _multi - converts a string to an integer
 * @s: string to be converted
 *
@@ -71,8 +64,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num1 = _atoi(argv[1]);
-	num2 = _atoi(argv[2]);
+	num1 = _multi(argv[1]);
+	num2 = _multi(argv[2]);
 	result = num1 * num2;
 
 	printf("%d\n", result);
