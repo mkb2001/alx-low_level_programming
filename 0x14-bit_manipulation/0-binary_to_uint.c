@@ -1,30 +1,29 @@
 #include "main.h"
 /**
- * binary_to_uint - function changes 
- * @b: the binary string to changes to integer
- * Return: the integer
+* binary_to_uint - function changes
+* @b: the binary string to changes to integer
+* Return: the integer
 */
 unsigned int binary_to_uint(const char *b)
 {
-    int length = strlen(b);
-    unsigned int i;
-    unsigned int fig;
+	unsigned int final, pow;
 
-    if (b == NULL)
-        return (0);
+	int length;
 
-    for (i = 0; i<length; i++)
-    {
-        if (b[i] == '0')
-        {
-            fig |= (0 << length - 1 -i); 
-        } else if (b[i] == '1')
-        {
-            fig |= (1 << length - 1 - i);
-        }else if (b[i] == '0' || b[i] == '1')
-        {
-            return (0);
-        }
-    }
-    return fig;
+	if (b == NULL)
+		return (0);
+
+	for (length = 0; b[length]; length++)
+	{
+		if (b[length] != '0' && b[length] != '1')
+			return (0);
+	}
+
+	for (pow = 1, final = 0, length--; length >= 0; length--, pow *= 2)
+	{
+		if (b[length] == '1')
+			final += pow;
+	}
+
+	return (final);
 }
