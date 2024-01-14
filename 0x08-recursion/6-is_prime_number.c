@@ -3,7 +3,7 @@
  * isprime - checks if number is a prime number
  * @n: this is the number being checked
  * @i: this is the number divided by.
- * Returns: 1 if it is a prime number and 0 if it is not.
+ * Return: 1 if it is a prime number and 0 if it is not.
 */
 int isprime(int n, int i)
 {
@@ -20,7 +20,7 @@ int isprime(int n, int i)
 /**
  * is_prime_number - returns 1 if the input integer is a prime number, otherwise return 0.
  * @n: the number checked.
- * Returns: returns 1 if the input integer is a prime number, otherwise return 0. 
+ * Return: returns 1 if the input integer is a prime number, otherwise return 0. 
 */
 int is_prime_number(int n)
 {
