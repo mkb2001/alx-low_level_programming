@@ -12,35 +12,35 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-    char *mem;
-    int i, j, x, y;
+	char *mem;
+	int i, j, x, y;
 
-    i = 0;
-    j = 0;
-    x = 0;
-    y = 0;
+	i = 0;
+	j = 0;
+	x = 0;
+	y = 0;
 
-    while (s1[i] != '\0')
-        i++;
-    
-    while (s2[j] != '\0')
-        j++;
+	while (s1[i] != '\0')
+		i++;
 
-    mem = (char *)malloc(sizeof(char) * (i+j));
+	while (s2[j] != '\0')
+		j++;
 
-    if (mem == NULL)
-        return (NULL);
+	mem = (char *)malloc(sizeof(char) * (i + j + 1));
 
-    while(s1[x] != '\0')
-    {
-        *(mem + x) = s1[x];
-        x++;
-    }
-    while(s2[y] != '\0')
-    {
-        *(mem + x + y) = s2[y];
-        y++;
-    }
-    *(mem + y + x) = '\0';
-    return (mem);
+	if (mem == NULL)
+		return (NULL);
+
+	while (s1[x] != '\0')
+	{
+		*(mem + x) = s1[x];
+		x++;
+	}
+	while (s2[y] != '\0')
+	{
+		*(mem + x + y) = s2[y];
+		y++;
+	}
+	*(mem + y + x) = '\0';
+	return (mem);
 }
