@@ -13,11 +13,11 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	int i, j, k, size;
 
-    k = 0;
-
+	k = 0;
+	size = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
+	i = 0;
 	while (i < ac)
 	{
 		j = 0;
@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 
 	if (ptr == NULL)
 		return (0);
-        
+
 	i = 0;
 	while (i < ac)
 	{
@@ -50,7 +50,4 @@ char *argstostr(int ac, char **av)
 	}
 	ptr[k] = '\0';
 	return (ptr);
-
-
-
 }
