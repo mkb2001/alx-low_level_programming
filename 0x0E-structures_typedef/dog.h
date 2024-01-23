@@ -16,6 +16,6 @@ struct dog
 
 	char *owner;
 
-}
+};
 
 #endif
