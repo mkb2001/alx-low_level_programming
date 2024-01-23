@@ -2,19 +2,19 @@
 #define OBJ_FILE_1
 /**
 * struct dog - structure about a dog
-* @name: the name of a dog
-* @age: the age of a dog
-* @owner: the dog's owner
+* @name: First member
+* @age: Second member
+* @owner: Third member
 *
-* Description - Define a new type struct dog with the following elements:
+* Description - Long description
 */
 struct dog
 {
 	char *name;
 
-	char *owner;
-
 	float age;
+
+	char *owner;
 
 }
 
