@@ -2,6 +2,8 @@
 #define ALX_LOW_LEVEL_PROGRAMMING_HASH_TABLES_H
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -30,6 +32,9 @@ typedef struct hash_table_s
     unsigned long int size;
     hash_node_t **array;
 } hash_table_t;
+
+int create_new_node(hash_node_t **head, char *data, char *data1);
+int hash_function(char buffer);
 hash_table_t *hash_table_create(unsigned long int size);
-void create_new_node(hash_node_t **head, int data);
+void  insert(hash_table_t **head, int num, int key , const char* value);
 #endif //ALX_LOW_LEVEL_PROGRAMMING_HASH_TABLES_H
